@@ -15,7 +15,7 @@
         <meta http-equiv="pragma" content="no-cache"/>
 
         <!-- Set the title bar of the page -->
-        <title>Pixel Game</title>
+        <title>Paper Plane</title>
 
         <!-- Custom PreStyle code is injected here -->
         
@@ -28,17 +28,27 @@
                 margin: 0px;
                 padding: 0px;
                 border: 0px;
+                width: 100%;
+                height: 100%;
             }
 
-            canvas {
-                image-rendering: optimizeSpeed;
-                -webkit-interpolation-mode: nearest-neighbor;
-                -ms-touch-action: none;
-                touch-action: none;
-                margin: 0px;
-                padding: 0px;
-                border: 0px;
-            }
+canvas {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+
+    -ms-touch-action: none;
+    touch-action: none;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    width: 100%;
+    /* height: 100%; */
+
+    /* IMPORTANT: prevent smoothing */
+    image-rendering: -webkit-optimize-contrast;
+}
             :-webkit-full-screen #canvas {
                 width: 100%;
                 height: 100%;
@@ -102,7 +112,7 @@
             
 
             <!-- Create the canvas element the game draws to -->
-            <canvas id="canvas" width="240" height="160" >
+            <canvas id="canvas" width="240'" height="160" >
                 
                 <p>Your browser doesn't support HTML5 canvas.</p>
             </canvas>
@@ -112,7 +122,7 @@
         </div>
 
         <!-- Run the game code -->
-        <script type="text/javascript" src="html5game/PaperPlane.js?cachebust=542242299"></script>
+        <script type="text/javascript" src="html5game/PaperPlane.js?cachebust=1469495286"></script>
 
         <!-- Builtin injector for injecting runner path -->
         
